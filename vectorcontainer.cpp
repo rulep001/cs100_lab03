@@ -5,9 +5,7 @@
 using namespace std;
 
 VectorContainer::VectorContainer()
-{
-
-}
+{ }
 
 void VectorContainer::add_element(Base* element) {
         vectcont.push_back(element);
@@ -18,6 +16,7 @@ void VectorContainer::print() {
         for (unsigned i = 0; i < vectcont.size(); ++i) {
                 cout << vectcont.at(i)->evaluate() << " ";
         }
+	cout << endl;
 }
 
 

@@ -3,6 +3,8 @@
 #include <list>
 #include "listcontainer.h"
 
+using namespace std;
+
 void ListContainer::add_element(Base* element) {
         listcont.push_back(element);
 }
@@ -13,6 +15,7 @@ void ListContainer::print() {
         for (it = listcont.begin(); it != listcont.end(); ++it) {
                 cout << (*it)->evaluate() << " ";
         }
+	cout << endl;
 }
 
 
