@@ -12,7 +12,7 @@ You will write a composite pattern for representing these expression trees. You 
         /* Pure Virtual Functions */
         virtual double evaluate() = 0;
     };
-```
+    ```
 
 Note that the main function in the base class is `evaluate()`, which will be used to return the value of the tree.
 
