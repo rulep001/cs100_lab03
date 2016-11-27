@@ -3,6 +3,8 @@
 
 #include <stdexcept>
 #include <stdlib.h>
+#include <list>
+#include <vector>
 #include "Base.h"
 #include "sort.h"
 
@@ -27,6 +29,34 @@ class Container {
 	virtual Base* at(int i) = 0;
 	// return container size
 	virtual int size() = 0;
-};    
+};
+
+class ListContainer : public Container {
+    protected:
+        list<Base*> listcont;
+    public:
+        ListContainer() { };
+        ListContainer(Sort* sort_function) : Container(sort_function) { };
+        void add_element(Base* element);
+        void print();
+        void sort();
+        void swap(int i, int j);
+        Base* at(int i);
+        int size();
+};
+
+class VectorContainer : public Container {
+    protected:
+        vector<Base*> vectcont;
+    public:
+        VectorContainer();
+        VectorContainer(Sort* sort_function);
+        void add_element(Base* element);
+        void print();
+        void sort();
+        void swap(int i, int j);
+        Base* at(int i);
+        int size();
+};
 
 #endif

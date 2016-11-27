@@ -1,7 +1,5 @@
 #include "Base.h"
 #include "container.h"
-#include "vectorcontainer.h"
-#include "listcontainer.h"
 
 using namespace std;
 
@@ -14,13 +12,13 @@ int main() {
 	Add *B = new Add ( op3 ,  A );
 	Sub *C = new Sub ( B ,  op2 );
 	Sqr *D = new Sqr ( C );
-	
+
 	VectorContainer * container = new VectorContainer();
 	container->add_element(A);
 	container->add_element(B);
 	container->add_element(C);
 	container->add_element(D);
-	
+
 	cout << "Container Before Sort: " << endl;
 	container->print();
 

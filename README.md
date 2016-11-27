@@ -5,14 +5,15 @@ You will start this lab by creating a composite pattern for representing an expr
 
 You will write a composite pattern for representing these expression trees. You are required to use the following base class:
 
-```class Base {  
+```
+class Base {  
     public:  
         /* Constructors */  
         Base() { };  
         /* Pure Virtual Functions */  
         virtual double evaluate() = 0;  
     };
-    ```
+```
 
 Note that the main function in the base class is `evaluate()`, which will be used to return the value of the tree.
 
